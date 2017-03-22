@@ -24,6 +24,10 @@
     [super tearDown];
 }
 
+- (void)testDemo {
+    XCTAssertEqual(1, 2);
+}
+
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
