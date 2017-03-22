@@ -207,15 +207,18 @@
 				TargetAttributes = {
 					0AF54D581E7F74F5006D1C11 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = P28THB67HH;
 						ProvisioningStyle = Automatic;
 					};
 					0AF54D711E7F74F5006D1C11 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = P28THB67HH;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0AF54D581E7F74F5006D1C11;
 					};
 					0AF54D7C1E7F74F5006D1C11 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = P28THB67HH;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0AF54D581E7F74F5006D1C11;
 					};
@@ -424,9 +427,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P28THB67HH;
 				INFOPLIST_FILE = TestJenkins/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.testjenkins.hotfix.TestJenkins;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testjenkins.hotfix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -435,9 +439,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P28THB67HH;
 				INFOPLIST_FILE = TestJenkins/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.testjenkins.hotfix.TestJenkins;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testjenkins.hotfix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -446,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = P28THB67HH;
 				INFOPLIST_FILE = TestJenkinsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.testjenkins.hotfix.TestJenkinsTests;
@@ -458,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = P28THB67HH;
 				INFOPLIST_FILE = TestJenkinsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.testjenkins.hotfix.TestJenkinsTests;
@@ -469,6 +476,7 @@
 		0AF54D8D1E7F74F5006D1C11 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = P28THB67HH;
 				INFOPLIST_FILE = TestJenkinsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.testjenkins.hotfix.TestJenkinsUITests;
@@ -480,6 +488,7 @@
 		0AF54D8E1E7F74F5006D1C11 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = P28THB67HH;
 				INFOPLIST_FILE = TestJenkinsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.testjenkins.hotfix.TestJenkinsUITests;
@@ -507,6 +516,7 @@
 				0AF54D881E7F74F5006D1C11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AF54D891E7F74F5006D1C11 /* Build configuration list for PBXNativeTarget "TestJenkinsTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +525,7 @@
 				0AF54D8B1E7F74F5006D1C11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AF54D8C1E7F74F5006D1C11 /* Build configuration list for PBXNativeTarget "TestJenkinsUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +534,7 @@
 				0AF54D8E1E7F74F5006D1C11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
