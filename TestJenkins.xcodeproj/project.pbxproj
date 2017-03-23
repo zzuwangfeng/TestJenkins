@@ -214,7 +214,6 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = P28THB67HH;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 0AF54D581E7F74F5006D1C11;
 					};
 					0AF54D7C1E7F74F5006D1C11 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -454,26 +453,22 @@
 		0AF54D8A1E7F74F5006D1C11 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = P28THB67HH;
 				INFOPLIST_FILE = TestJenkinsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.testjenkins.hotfix.TestJenkinsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestJenkins.app/TestJenkins";
 			};
 			name = Debug;
 		};
 		0AF54D8B1E7F74F5006D1C11 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = P28THB67HH;
 				INFOPLIST_FILE = TestJenkinsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.testjenkins.hotfix.TestJenkinsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestJenkins.app/TestJenkins";
 			};
 			name = Release;
 		};
