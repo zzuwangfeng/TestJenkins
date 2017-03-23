@@ -35,6 +35,25 @@
 - (void)testExample {
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    XCUIElement *usernameTextField = app.textFields[@"username"];
+    [usernameTextField tap];
+    [usernameTextField tap];
+    [usernameTextField typeText:@"ds"];
+    
+    XCUIElement *passwordTextField = app.textFields[@"password"];
+    [passwordTextField typeText:@"fda "];
+    [passwordTextField tap];
+    [passwordTextField tap];
+    [passwordTextField typeText:@"dfdafda"];
+    
+    XCUIElement *loginButton = app.buttons[@"login"];
+    [loginButton tap];
+    [loginButton tap];
+    [[app.otherElements containingType:XCUIElementTypeTextField identifier:@"username"].element tap];
+    
 }
 
 @end
