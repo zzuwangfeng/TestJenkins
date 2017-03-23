@@ -27,6 +27,19 @@
 - (void)testDemo {
     XCTAssertEqual(1, 2);
 }
+- (void)testDemo1 {
+    XCTAssertEqual(1, 1);
+}
+
+- (void)testDemo2 {
+    XCTAssertEqual(1, 1);
+}
+
+
+- (void)testDemo3 {
+    XCTAssertEqual(1, 1);
+}
+
 
 - (void)testExample {
     // This is an example of a functional test case.
