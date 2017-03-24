@@ -16,7 +16,7 @@ echo "Current Branch: $branch"
 
 ## 在本分支新增的文件(Pods 除外)
 files=$(git diff --name-only --diff-filter=A dev $branch | grep '^[^(Pods/)].*\.[mh]$')
-[[ -n "$files" ]] || { printf "没有新增文件\n"; exit 0; }
+#[[ -n "$files" ]] || { printf "没有新增文件\n"; exit 0; }
 commnadFiles=""
 echo "\nAnalized Files:\n--------------------------------"
 for file in $files; do
