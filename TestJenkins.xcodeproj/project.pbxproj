@@ -16,6 +16,7 @@
 		0AF54D771E7F74F5006D1C11 /* TestJenkinsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF54D761E7F74F5006D1C11 /* TestJenkinsTests.m */; };
 		0AF54D821E7F74F5006D1C11 /* TestJenkinsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF54D811E7F74F5006D1C11 /* TestJenkinsUITests.m */; };
 		A681A6391E84C3A90041DA82 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = A681A6381E84C3A90041DA82 /* Test.m */; };
+		A681A63C1E84C8700041DA82 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = A681A63B1E84C8700041DA82 /* MyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		0AF54D831E7F74F5006D1C11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A681A6371E84C3A90041DA82 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		A681A6381E84C3A90041DA82 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		A681A63A1E84C8700041DA82 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		A681A63B1E84C8700041DA82 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				0AF54D6A1E7F74F5006D1C11 /* LaunchScreen.storyboard */,
 				0AF54D6D1E7F74F5006D1C11 /* Info.plist */,
 				0AF54D5C1E7F74F5006D1C11 /* Supporting Files */,
+				A681A63A1E84C8700041DA82 /* MyView.h */,
+				A681A63B1E84C8700041DA82 /* MyView.m */,
 			);
 			path = TestJenkins;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				A681A6391E84C3A90041DA82 /* Test.m in Sources */,
 				0AF54D611E7F74F5006D1C11 /* AppDelegate.m in Sources */,
 				0AF54D5E1E7F74F5006D1C11 /* main.m in Sources */,
+				A681A63C1E84C8700041DA82 /* MyView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
