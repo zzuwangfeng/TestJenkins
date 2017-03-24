@@ -35,7 +35,7 @@ echo "Report Type: $type"
 report_file_o="./report_result.$type"
 #xcodebuild |xcpretty -r json-compilation-database
 xcodebuild clean
-xcodebuild | xcpretty -r json-compilation-database
+xcodebuild | /usr/local/bin/xcpretty -r json-compilation-database
 cp build/reports/compilation_db.json compile_commands.json
 /usr/local/bin/oclint-json-compilation-database -e Pods   -- -rc=LONG_LINE=200 -rc=NCSS_METHOD=100  -o=report.html
 #/usr/local/bin/oclint-json-compilation-database -e Pods -- -o=report.html -- -x objective-c -std=gnu99 -fobjc-arc
