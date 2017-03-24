@@ -29,7 +29,7 @@ echo "--------------------------------\n"
 
 ## 输出类型，默认 html
 type=$1
-[[ -n $1 ]] || type='html'
+[[ -n $1 ]] || type='xml'
 echo "Report Type: $type"
 
 report_file_o="./report_result.$type"
@@ -37,7 +37,7 @@ report_file_o="./report_result.$type"
 xcodebuild clean
 xcodebuild | /usr/local/bin/xcpretty -r json-compilation-database
 cp build/reports/compilation_db.json compile_commands.json
-/usr/local/bin/oclint-json-compilation-database -e Pods   -- -rc=LONG_LINE=200 -rc=NCSS_METHOD=100  -o $report_file_o
+/usr/local/bin/oclint-json-compilation-database -e Pods   -- -rc=LONG_LINE=200 -rc=NCSS_METHOD=100 pmd -o $report_file_o
 #/usr/local/bin/oclint-json-compilation-database -e Pods -- -o=report.html -- -x objective-c -std=gnu99 -fobjc-arc
 #/usr/local/bin/oclint $commnadFiles -report-type $type -R ./rules -o $report_file_o \
 #-rc LONG_METHOD=50 \
