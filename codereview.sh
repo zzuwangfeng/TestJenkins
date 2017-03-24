@@ -12,10 +12,10 @@ branch=$(git rev-parse --abbrev-ref HEAD)
 echo "Current Branch: $branch"
 
 ## 在本分支修改的文件
-# files=$(git diff --name-only dev $(git merge-base dev master) | grep '^[^(Pods/)].*\.m$')
+ files=$(git diff --name-only dev $(git merge-base dev master) | grep '^[^(Pods/)].*\.m$')
 
 ## 在本分支新增的文件(Pods 除外)
-files=$(git diff --name-only --diff-filter=A dev $branch | grep '^[^(Pods/)].*\.[mh]$')
+#files=$(git diff --name-only --diff-filter=A master $branch | grep '^[^(Pods/)].*\.[mh]$')
 [[ -n "$files" ]] || { printf "\e[1;36m没有新增文件\e[0m\n"; exit 0; }
 commnadFiles=""
 echo "\nAnalized Files:\n--------------------------------"
