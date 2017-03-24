@@ -33,10 +33,16 @@ type=$1
 echo "Report Type: $type"
 
 report_file_o="./report_result.$type"
-/usr/local/bin/oclint $commnadFiles -report-type $type -R ./rules -o $report_file_o \
--rc LONG_METHOD=50 \
--rc TOO_MANY_PARAMETERS=8 \
--- -x objective-c -std=gnu99 -fobjc-arc
+#xcodebuild |xcpretty -r json-compilation-database
+xcodebuild clean
+xcodebuild | xcpretty -r json-compilation-database
+cp build/reports/compilation_db.json compile_commands.json
+/usr/local/bin/oclint-json-compilation-database -e Pods   -- -rc=LONG_LINE=200 -rc=NCSS_METHOD=100  -o=report.html
+#/usr/local/bin/oclint-json-compilation-database -e Pods -- -o=report.html -- -x objective-c -std=gnu99 -fobjc-arc
+#/usr/local/bin/oclint $commnadFiles -report-type $type -R ./rules -o $report_file_o \
+#-rc LONG_METHOD=50 \
+#-rc TOO_MANY_PARAMETERS=8 \
+#-- -x objective-c -std=gnu99 -fobjc-arc
 
 if [ $? -eq 0 ]; then
     printf "报告生成成功！\n"
