@@ -36,8 +36,28 @@ report_file_o="./report_result.$type"
 #xcodebuild |xcpretty -r json-compilation-database
 xcodebuild clean
 xcodebuild | /usr/local/bin/xcpretty -r json-compilation-database
+
+maxPriority=15000
+# Disable rules
+LINT_DISABLE_RULES="-disable-rule=LongClass \
+-disable-rule=LongLine \
+-disable-rule=LongMethod \
+-disable-rule=LongVariableName \
+-disable-rule=ShortVariableName \
+-disable-rule=HighNcssMethod \
+-disable-rule=DeepNestedBlock \
+-disable-rule=TooManyFields \
+-disable-rule=TooManyMethods \
+-disable-rule=TooManyParameters \
+-disable-rule=IvarAssignmentOutsideAccessorsOrInit"
+
+
+
 cp build/reports/compilation_db.json compile_commands.json
-/usr/local/bin/oclint-json-compilation-database -e Pods   -- -rc=LONG_LINE=200 -rc=NCSS_METHOD=100 pmd -o $report_file_o
+
+/usr/local/bin/oclint-json-compilation-database -e PodsPods -v -- -report-type pmd -o $report_file_o -max-priority-1=$maxPriority -max-priority-2=$maxPriority -max-priority-3=$maxPriority $LINT_DISABLE_RULES
+
+#/usr/local/bin/oclint-json-compilation-database -e Pods   -- -rc=LONG_LINE=200 -rc=NCSS_METHOD=100 pmd -o $report_file_o
 #/usr/local/bin/oclint-json-compilation-database -e Pods -- -o=report.html -- -x objective-c -std=gnu99 -fobjc-arc
 #/usr/local/bin/oclint $commnadFiles -report-type $type -R ./rules -o $report_file_o \
 #-rc LONG_METHOD=50 \
