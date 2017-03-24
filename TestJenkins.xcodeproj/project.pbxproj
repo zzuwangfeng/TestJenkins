@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A260A001E84E96100152CA7 /* test6.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2609FF1E84E96100152CA7 /* test6.m */; };
 		0AF54D5E1E7F74F5006D1C11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF54D5D1E7F74F5006D1C11 /* main.m */; };
 		0AF54D611E7F74F5006D1C11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF54D601E7F74F5006D1C11 /* AppDelegate.m */; };
 		0AF54D641E7F74F5006D1C11 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF54D631E7F74F5006D1C11 /* ViewController.m */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A2609FE1E84E96100152CA7 /* test6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test6.h; sourceTree = "<group>"; };
+		0A2609FF1E84E96100152CA7 /* test6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test6.m; sourceTree = "<group>"; };
 		0AF54D591E7F74F5006D1C11 /* TestJenkins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestJenkins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF54D5D1E7F74F5006D1C11 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0AF54D5F1E7F74F5006D1C11 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -140,6 +143,8 @@
 				A681A6441E84E0340041DA82 /* test2.m */,
 				A681A6461E84E3BD0041DA82 /* test3.h */,
 				A681A6471E84E3BD0041DA82 /* test3.m */,
+				0A2609FE1E84E96100152CA7 /* test6.h */,
+				0A2609FF1E84E96100152CA7 /* test6.m */,
 			);
 			path = TestJenkins;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				A681A6451E84E0340041DA82 /* test2.m in Sources */,
 				0AF54D611E7F74F5006D1C11 /* AppDelegate.m in Sources */,
 				A681A6481E84E3BD0041DA82 /* test3.m in Sources */,
+				0A260A001E84E96100152CA7 /* test6.m in Sources */,
 				0AF54D5E1E7F74F5006D1C11 /* main.m in Sources */,
 				A681A63C1E84C8700041DA82 /* MyView.m in Sources */,
 			);
