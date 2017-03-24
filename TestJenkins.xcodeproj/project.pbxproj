@@ -17,6 +17,7 @@
 		0AF54D821E7F74F5006D1C11 /* TestJenkinsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AF54D811E7F74F5006D1C11 /* TestJenkinsUITests.m */; };
 		A681A6391E84C3A90041DA82 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = A681A6381E84C3A90041DA82 /* Test.m */; };
 		A681A63C1E84C8700041DA82 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = A681A63B1E84C8700041DA82 /* MyView.m */; };
+		A681A63F1E84CA6D0041DA82 /* MyBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A681A63E1E84CA6D0041DA82 /* MyBaseView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		A681A6381E84C3A90041DA82 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		A681A63A1E84C8700041DA82 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
 		A681A63B1E84C8700041DA82 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		A681A63D1E84CA6D0041DA82 /* MyBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBaseView.h; sourceTree = "<group>"; };
+		A681A63E1E84CA6D0041DA82 /* MyBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBaseView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				0AF54D5C1E7F74F5006D1C11 /* Supporting Files */,
 				A681A63A1E84C8700041DA82 /* MyView.h */,
 				A681A63B1E84C8700041DA82 /* MyView.m */,
+				A681A63D1E84CA6D0041DA82 /* MyBaseView.h */,
+				A681A63E1E84CA6D0041DA82 /* MyBaseView.m */,
 			);
 			path = TestJenkins;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AF54D641E7F74F5006D1C11 /* ViewController.m in Sources */,
+				A681A63F1E84CA6D0041DA82 /* MyBaseView.m in Sources */,
 				A681A6391E84C3A90041DA82 /* Test.m in Sources */,
 				0AF54D611E7F74F5006D1C11 /* AppDelegate.m in Sources */,
 				0AF54D5E1E7F74F5006D1C11 /* main.m in Sources */,
