@@ -16,7 +16,7 @@ echo "Current Branch: $branch"
 
 ## 在本分支新增的文件(Pods 除外)
 #files=$(git diff --name-only --diff-filter=A master $branch | grep '^[^(Pods/)].*\.[mh]$')
-[[ -n "$files" ]] || { printf "\e[1;36m没有新增文件\e[0m\n"; exit 0; }
+[[ -n "$files" ]] || { printf "没有新增文件\n"; exit 0; }
 commnadFiles=""
 echo "\nAnalized Files:\n--------------------------------"
 for file in $files; do
@@ -39,8 +39,8 @@ report_file_o="./report_result.$type"
 -- -x objective-c -std=gnu99 -fobjc-arc
 
 if [ $? -eq 0 ]; then
-    printf "\e[1;36m报告生成成功！\e[0m\n"
+    printf "报告生成成功！\n"
 else
-    printf "\e[1;31m报告生成失败\e[0m\n"
+    printf "报告生成失败\n"
     exit 1
 fi
