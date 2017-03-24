@@ -33,7 +33,7 @@ type=$1
 echo "Report Type: $type"
 
 report_file_o="./report_result.$type"
-oclint $commnadFiles -report-type $type -R ./rules -o $report_file_o \
+/usr/local/binoclint $commnadFiles -report-type $type -R ./rules -o $report_file_o \
 -rc LONG_METHOD=50 \
 -rc TOO_MANY_PARAMETERS=8 \
 -- -x objective-c -std=gnu99 -fobjc-arc
