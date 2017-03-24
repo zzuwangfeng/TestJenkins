@@ -3,7 +3,7 @@ git=$(which git)
 [[ -x "$git" ]] || { printf "\e[1;31mGit Not Found,  \"brew install git\"...\e[0m\n";exit 1; }
 
 ## 检查 OCLint 是否存在
-lint=$(which oclint) 
+lint=$(which /usr/local/bin/oclint) 
 [[ -x "$lint" ]] || { printf "\e[1;31mOCLint Not Found, use \"brew tap oclint/formulae && brew install oclint\" to install\e[0m\n"; exit 1; }
 
 ## 获取当前分支
