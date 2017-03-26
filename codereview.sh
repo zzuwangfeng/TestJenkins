@@ -12,11 +12,16 @@ branch=$(git rev-parse --abbrev-ref HEAD)
 echo "Current Branch: $branch"
 
 ## 在本分支修改的文件
- files=$(git diff --name-only dev $(git merge-base dev master) | grep '^[^(Pods/)].*\.m$')
+# files=$(git diff --name-only dev $(git merge-base dev master) | grep '^[^(Pods/)].*\.m$')
 
 ## 在本分支新增的文件(Pods 除外)
-#files=$(git diff --name-only --diff-filter=A master $branch | grep '^[^(Pods/)].*\.[mh]$')
+
+files=$(git diff --name-only --diff-filter=A dev $branch | grep '^[^(Pods/)].*\.[mh]$')
 [[ -n "$files" ]] || { printf "没有新增文件\n"; exit 0; }
+
+files=$(git diff --name-only --diff-filter=A dev $branch | grep '^[^(Pods/)].*\.[mh]$')
+#[[ -n "$files" ]] || { printf "没有新增文件\n"; exit 0; }
+
 commnadFiles=""
 echo "\nAnalized Files:\n--------------------------------"
 for file in $files; do
@@ -29,14 +34,40 @@ echo "--------------------------------\n"
 
 ## 输出类型，默认 html
 type=$1
-[[ -n $1 ]] || type='html'
+[[ -n $1 ]] || type='xml'
 echo "Report Type: $type"
 
 report_file_o="./report_result.$type"
-/usr/local/bin/oclint $commnadFiles -report-type $type -R ./rules -o $report_file_o \
--rc LONG_METHOD=50 \
--rc TOO_MANY_PARAMETERS=8 \
--- -x objective-c -std=gnu99 -fobjc-arc
+#xcodebuild |xcpretty -r json-compilation-database
+xcodebuild clean
+xcodebuild | /usr/local/bin/xcpretty -r json-compilation-database
+
+maxPriority=15000
+# Disable rules
+LINT_DISABLE_RULES="-disable-rule=LongClass \
+-disable-rule=LongLine \
+-disable-rule=LongMethod \
+-disable-rule=LongVariableName \
+-disable-rule=ShortVariableName \
+-disable-rule=HighNcssMethod \
+-disable-rule=DeepNestedBlock \
+-disable-rule=TooManyFields \
+-disable-rule=TooManyMethods \
+-disable-rule=TooManyParameters \
+-disable-rule=IvarAssignmentOutsideAccessorsOrInit"
+
+
+
+cp build/reports/compilation_db.json compile_commands.json
+
+/usr/local/bin/oclint-json-compilation-database -e PodsPods -v -- -report-type pmd -o $report_file_o -max-priority-1=$maxPriority -max-priority-2=$maxPriority -max-priority-3=$maxPriority 
+
+#/usr/local/bin/oclint-json-compilation-database -e Pods   -- -rc=LONG_LINE=200 -rc=NCSS_METHOD=100 pmd -o $report_file_o
+#/usr/local/bin/oclint-json-compilation-database -e Pods -- -o=report.html -- -x objective-c -std=gnu99 -fobjc-arc
+#/usr/local/bin/oclint $commnadFiles -report-type $type -R ./rules -o $report_file_o \
+#-rc LONG_METHOD=50 \
+#-rc TOO_MANY_PARAMETERS=8 \
+#-- -x objective-c -std=gnu99 -fobjc-arc
 
 if [ $? -eq 0 ]; then
     printf "报告生成成功！\n"
