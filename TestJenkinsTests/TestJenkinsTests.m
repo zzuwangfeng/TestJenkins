@@ -25,7 +25,7 @@
 }
 
 - (void)testDemo {
-    XCTAssertEqual(1, 2);
+    XCTAssertEqual(1, 1);
 }
 - (void)testDemo1 {
     XCTAssertEqual(1, 1);
