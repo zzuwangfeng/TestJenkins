@@ -55,7 +55,8 @@ LINT_DISABLE_RULES="-disable-rule=LongClass \
 
 cp build/reports/compilation_db.json compile_commands.json
 
-/usr/local/bin/oclint-json-compilation-database -e PodsPods -v -- -report-type pmd -o $report_file_o -max-priority-1=$maxPriority -max-priority-2=$maxPriority -max-priority-3=$maxPriority 
+/usr/local/bin/oclint-json-compilation-database -e PodsPods -v -- -report-type pmd -o $report_file_o -max-priority-1=$maxPriority -max-priority-2=$maxPriority -max-priority-3=$maxPriority
+# /usr/local/bin/oclint-json-compilation-database -e PodsPods -v -- -report-type pmd -o $report_file_o -max-priority-1=$maxPriority -max-priority-2=$maxPriority -max-priority-3=$maxPriority $LINT_DISABLE_RULES
 
 #/usr/local/bin/oclint-json-compilation-database -e Pods   -- -rc=LONG_LINE=200 -rc=NCSS_METHOD=100 pmd -o $report_file_o
 #/usr/local/bin/oclint-json-compilation-database -e Pods -- -o=report.html -- -x objective-c -std=gnu99 -fobjc-arc
