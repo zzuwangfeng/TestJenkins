@@ -17,6 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    if (1) {
+        
+    }
+    
+    if (1) {
+        
+    }
+    
+    if (1) {
+        
+    }
+    
+    if (1) {
+        
+    }
 }
 
 - (IBAction)btnClick:(id)sender {
