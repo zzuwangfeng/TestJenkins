@@ -469,7 +469,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: DuanChongchong China Henan province (CALD6GZ432)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: DuanChongchong China Henan province (CALD6GZ432)";
 				DEVELOPMENT_TEAM = P28THB67HH;
 				INFOPLIST_FILE = TestJenkins/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -483,7 +484,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: DuanChongchong China Henan province (CALD6GZ432)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: DuanChongchong China Henan province (CALD6GZ432)";
 				DEVELOPMENT_TEAM = P28THB67HH;
 				INFOPLIST_FILE = TestJenkins/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
