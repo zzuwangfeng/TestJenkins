@@ -10,4 +10,9 @@
 
 @implementation test6
 
+
+
+- (void)logMessage {
+    NSLog(@"message");
+}
 @end

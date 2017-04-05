@@ -18,4 +18,8 @@
 }
 */
 
+- (void)logMessage {
+    NSLog(@"message");
+}
+
 @end
