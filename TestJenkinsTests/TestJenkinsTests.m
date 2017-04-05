@@ -40,6 +40,14 @@
     XCTAssertEqual(1, 1);
 }
 
+- (void)testDemo4 {
+    XCTAssertEqual(2, 1);
+}
+
+- (void)testDemo5 {
+    XCTAssertEqual(3, 1);
+}
+
 
 - (void)testExample {
     // This is an example of a functional test case.
